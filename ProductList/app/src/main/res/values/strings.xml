@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">ProductList</string>
     <string name="action_settings">Settings</string>
+
+    <!-- hints for volley error and dialogs-->
+    <string name="title_err_attention">Attention</string>
+    <string name="txt_hint_retry">Retry</string>
+    <string name="txt_hint_yes">Yes</string>
+    <string name="txt_hint_no">No</string>
+    <string name="txt_hint_no_internet">No working Internet connection is found.\n\nPlease make sure that you are connected to the internet and try again.</string>
+    <string name="txt_hint_server_error">Oops, we are experiencing some issues. We will be back.</string>
 </resources>
