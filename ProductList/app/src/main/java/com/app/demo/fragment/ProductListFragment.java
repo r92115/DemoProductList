@@ -115,6 +115,13 @@ public class ProductListFragment extends Fragment implements BookmarkCallBack{
     public void onResume() {
         super.onResume();
 
+        try {
+            productListAdapter.clearApplications();
+            productListModelList.clear();
+        } catch (Exception e) {
+            Log.getStackTraceString(e);
+        }
+
         // load cloths from server.
         loadClothsListFromServer();
         // load foods from server.
@@ -197,7 +204,7 @@ public class ProductListFragment extends Fragment implements BookmarkCallBack{
                 productListModel.setSalePrice(productJsonObject.getString("sale_price"));
 
                 // adding product type
-                if (productType.equalsIgnoreCase("Clothes")) {
+                if (productType.equalsIgnoreCase("Cloths")) {
                     productListModel.setProductType("Cloths");
                     productListModel.setSizeOrModel(productJsonObject.getString("size_list"));
                 } else {
@@ -250,13 +257,17 @@ public class ProductListFragment extends Fragment implements BookmarkCallBack{
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
 
-                if (productListModel.isBookmarked()) {
-                    productListModelList.get(position).setBookmarked(false);
-                } else {
-                    productListModelList.get(position).setBookmarked(true);
-                }
+                try {
+                    if (productListModel.isBookmarked()) {
+                        productListModelList.get(position).setBookmarked(false);
+                    } else {
+                        productListModelList.get(position).setBookmarked(true);
+                    }
 
-                refreshProductList();
+                    refreshProductList();
+                } catch (Exception e) {
+                    Log.getStackTraceString(e);
+                }
             }
         });
 

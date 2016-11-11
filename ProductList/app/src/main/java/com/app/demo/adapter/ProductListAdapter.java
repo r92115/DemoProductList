@@ -183,4 +183,17 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         this.productListModelList.addAll(userDetailList);
         this.notifyItemRangeInserted(0, userDetailList.size() - 1);
     }
+
+    /**
+     * clearing the views.
+     */
+    public void clearApplications() {
+        int size = productListModelList.size();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                productListModelList.remove(0);
+            }
+            this.notifyItemRangeRemoved(0, size);
+        }
+    }
 }
