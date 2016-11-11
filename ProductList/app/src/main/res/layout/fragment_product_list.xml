@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_product_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.demo.fragment.ProductListFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_05dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:clipToPadding="false"
+        app:layoutManager="LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/txt_hint_loading_products"/>
+</FrameLayout>

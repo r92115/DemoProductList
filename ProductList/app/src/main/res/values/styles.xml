@@ -1,20 +1,62 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/colorAppBackground</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <!-- toolbar theme starts-->
+    <style name="toolBarTheme">
+        <item name="android:background">?attr/colorPrimary</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--text view theme starts-->
+    <style name="textViewProductTitleTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margin_05dp</item>
+    </style>
+
+    <style name="textViewProductDetailTitleTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margin_05dp</item>
+    </style>
+
+    <style name="textViewSalePriceTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_34sp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_05dp</item>
+    </style>
+
+    <style name="textViewProductDescriptionLabelTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_15sp</item>
+        <item name="android:layout_margin">@dimen/margin_05dp</item>
+    </style>
+
+    <style name="textViewProductDescriptionTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_12sp</item>
+        <item name="android:layout_margin">@dimen/margin_05dp</item>
+    </style>
+
+    <style name="textViewTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/margin_12sp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_05dp</item>
+    </style>
 </resources>

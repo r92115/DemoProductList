@@ -8,6 +8,8 @@ package com.app.demo.utilities;
 
 public class Constant {
     public static final String APP_TAG = "PRODUCT_LIST";
+    public static final String PRODUCT_LIST_MODEL_INTENT = "PRODUCT_LIST_MODEL_INTENT";
+    public static final String PRODUCT_LIST_POSITION = "PRODUCT_LIST_POSITION";
 
     // server url
     private static final String BASE_URL = "https://sky-firebase.firebaseapp.com/mobmerry/";

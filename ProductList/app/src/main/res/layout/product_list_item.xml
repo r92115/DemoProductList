@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/margin_05dp"
+    card_view:cardElevation="@dimen/margin_05dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivThumbNail"
+            android:layout_width="@dimen/margin_150dp"
+            android:layout_height="@dimen/margin_160dp"
+            android:contentDescription="@string/app_name"
+            card_view:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tvProductTitle"
+            style="@style/textViewProductTitleTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ivThumbNail"
+            android:layout_toRightOf="@+id/ivThumbNail"
+            android:text="@string/txt_hint_title" />
+
+        <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductTitle"
+            android:layout_toEndOf="@+id/ivThumbNail"
+            android:layout_toRightOf="@+id/ivThumbNail"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvBasePriceLabel"
+                    style="@style/textViewTheme"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_hint_base_price" />
+
+                <TextView
+                    android:id="@+id/tvBasePrice"
+                    style="@style/textViewTheme"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/app_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvSalePriceLabel"
+                    style="@style/textViewTheme"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_hint_sale_price" />
+
+                <TextView
+                    android:id="@+id/tvSalePrice"
+                    style="@style/textViewTheme"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSizeOrModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llPrice"
+            android:layout_toEndOf="@+id/ivThumbNail"
+            android:layout_toRightOf="@+id/ivThumbNail"
+            android:layout_marginTop="@dimen/margin_05dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvSpnrProductLabel"
+                style="@style/textViewTheme"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:layout_weight="0.5"/>
+
+            <Spinner
+                android:id="@+id/spnrProductTagOrSize"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            card_view:srcCompat="@drawable/ic_bookmark_white"
+            android:layout_below="@+id/llSizeOrModel"
+            android:baselineAlignBottom="true"
+            android:layout_alignBaseline="@+id/ivThumbNail"
+            android:layout_toEndOf="@+id/ivThumbNail"
+            android:layout_toRightOf="@+id/ivThumbNail"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

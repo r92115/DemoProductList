@@ -9,4 +9,21 @@
     <string name="txt_hint_no">No</string>
     <string name="txt_hint_no_internet">No working Internet connection is found.\n\nPlease make sure that you are connected to the internet and try again.</string>
     <string name="txt_hint_server_error">Oops, we are experiencing some issues. We will be back.</string>
+
+    <!-- hints-->
+    <string name="txt_hint_title">Men Original Skateboarding Scratched Stamp Tee</string>
+    <string name="txt_hint_base_price">Base Price</string>
+    <string name="txt_hint_sale_price">Sale Price</string>
+    <string name="txt_hint_size">Size</string>
+    <string name="txt_hint_tags">Tags</string>
+    <string name="txt_hint_add_bookmark">Are you sure you want to add</string>
+    <string name="txt_hint_remove_bookmark">Are you sure you want to remove</string>
+    <string name="txt_hint_rs">Rs</string>
+    <string name="txt_hint_description">Description</string>
+    <string name="txt_hint_loading_products">Loading&#8230;</string>
+
+    <string-array name="action_bar_tab_array">
+        <item>PRODUCTS</item>
+    </string-array>
+    <string name="title_activity_product_detail">ProductDetail</string>
 </resources>
